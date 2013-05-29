@@ -12,7 +12,7 @@ Please note that this is an open source project. I work on it when I can and I i
 
 # Versions
 ## 1.6
-  * Compatible with hibernate 4.3.0.
+  * Compatible with hibernate 4.2.0.
 
 # Versions
 ## 1.5
