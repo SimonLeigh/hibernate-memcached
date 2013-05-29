@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.googlecode</groupId>
     <artifactId>hibernate-memcached</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.6-RO-SNAPSHOT</version>
     <name>hibernate-memcached</name>
     <description>A library for using Memcached as a second level distributed cache in Hibernate.</description>
     <url>http://code.google.com/p/hibernate-memcached/</url>
@@ -34,11 +34,7 @@
             <name>Java.net Repository for Maven</name>
             <url>http://download.java.net/maven/2/</url>
         </repository>
-        <repository>
-          <id>couchbase</id>
-          <name>Spymemcached repository</name>
-          <url>http://files.couchbase.com/maven2/</url>
-        </repository>
+       
     </repositories>
 
     <scm>
@@ -118,19 +114,7 @@
                     </descriptorRefs>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>groovy-maven-plugin</artifactId>
-                <version>1.0-rc-5</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generateTestStubs</goal>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+           
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-scm-plugin</artifactId>
@@ -164,11 +148,13 @@
     </build>
 
     <dependencies>
+     
         <dependency>
-            <groupId>spy</groupId>
-            <artifactId>spymemcached</artifactId>
-            <version>2.7.1</version>
-        </dependency>
+			<groupId>com.google.code.simple-spring-memcached</groupId>
+			<artifactId>spymemcached</artifactId>
+			<version>2.7.3</version>
+		</dependency>
+		
         <dependency>
             <groupId>com.danga</groupId>
             <artifactId>java_memcached</artifactId>
@@ -184,45 +170,8 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.0.1.Final</version>
+            <version>4.2.0.Final</version>
         </dependency>
-        <!--dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
-            <version>3.2.6.ga</version>
-            <scope>compile</scope>
-        </dependency-->
-
-        <!--dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-annotations</artifactId>
-            <version>3.3.1.GA</version>
-            <scope>test</scope>
-        </dependency-->
         
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.5.6</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.4</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>1.8.0.7</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>1.6.3</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 </project>

@@ -1,10 +1,9 @@
 package com.googlecode.hibernate.memcached;
 
-import com.googlecode.hibernate.memcached.utils.StringUtils;
+import java.util.regex.Pattern;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.regex.Pattern;
 
 /**
  * KeyStrategy base class that handles concatenation, cleaning, and truncating the final cache key.
