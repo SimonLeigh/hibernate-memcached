@@ -75,11 +75,11 @@ public class MemcachedCollectionRegion extends AbstractMemcachedRegion implement
 
     public boolean isTransactionAware()
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return false;
     }
 
     public CacheDataDescription getCacheDataDescription()
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return metadata;
     }
 }
