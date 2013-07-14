@@ -19,12 +19,10 @@ class BaseTransactionalDataRegion extends BaseGeneralDataRegion implements Trans
         this.metadata = metadata;
     }
 
-    @Override
     public CacheDataDescription getCacheDataDescription() {
         return metadata;
     }
 
-    @Override
     public boolean isTransactionAware() {
         return false;
     }

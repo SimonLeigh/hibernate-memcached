@@ -33,7 +33,6 @@ public class NaturalIdRegionImpl extends BaseTransactionalDataRegion implements 
         return settings;
     }
 
-    @Override
     public NaturalIdRegionAccessStrategy buildAccessStrategy(AccessType accessType) throws CacheException {
         switch ( accessType ) {
             case READ_ONLY:

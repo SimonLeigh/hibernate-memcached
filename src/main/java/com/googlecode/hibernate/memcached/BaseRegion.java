@@ -24,47 +24,38 @@ class BaseRegion implements Region {
         this.name = name;
     }
 
-    @Override
     public boolean contains(Object key) {
         return key != null ? cache.containsKey( key ) : false;
     }
 
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public void destroy() throws CacheException {
         cache.clear();
     }
 
-    @Override
     public long getSizeInMemory() {
         return -1;
     }
 
-    @Override
     public long getElementCountInMemory() {
         return cache.size();
     }
 
-    @Override
     public long getElementCountOnDisk() {
         return 0;
     }
 
-    @Override
     public Map<Object, Object> toMap() {
         return Collections.unmodifiableMap( cache );
     }
 
-    @Override
     public long nextTimestamp() {
         return Timestamper.next();
     }
 
-    @Override
     public int getTimeout() {
         return timeout;
     }

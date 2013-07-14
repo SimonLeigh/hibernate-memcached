@@ -27,17 +27,14 @@ public class ReadWriteNaturalIdRegionAccessStrategy extends AbstractReadWriteAcc
         this.region = region;
     }
 
-    @Override
     public boolean insert(Object key, Object value) throws CacheException {
         return false;
     }
 
-    @Override
     public boolean update(Object key, Object value) throws CacheException {
         return false;
     }
 
-    @Override
     public boolean afterInsert(Object key, Object value) throws CacheException {
 
         try {
@@ -54,7 +51,6 @@ public class ReadWriteNaturalIdRegionAccessStrategy extends AbstractReadWriteAcc
         }
     }
 
-    @Override
     public boolean afterUpdate(Object key, Object value, SoftLock lock) throws CacheException {
         try {
             writeLock.lock();
@@ -93,7 +89,6 @@ public class ReadWriteNaturalIdRegionAccessStrategy extends AbstractReadWriteAcc
         return region.getSettings().isMinimalPutsEnabled();
     }
 
-    @Override
     public NaturalIdRegion getRegion() {
         return region;
     }

@@ -30,7 +30,7 @@ class HashCodeKeyStrategyTest extends AbstractKeyStrategyTestCase {
     void test_really_long_key_throws_exception() {
         String regionName = ""
         250.times {regionName += "x"}
-        shouldFail(IllegalArgumentException) {
+        shouldFail(IllegalArgumentException.class) {
           getKeyStrategy().toKey(regionName, 0, "blah blah blah")
         }
     }

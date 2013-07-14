@@ -25,7 +25,6 @@ public class BaseGeneralDataRegion extends BaseRegion implements GeneralDataRegi
         super( name );
     }
 
-    @Override
     public Object get(Object key) throws CacheException {
         LOG.debugf( "Cache[%s] lookup : key[%s]",getName(), key );
         if ( key == null ) {
@@ -38,7 +37,6 @@ public class BaseGeneralDataRegion extends BaseRegion implements GeneralDataRegi
         return result;
     }
 
-    @Override
     public void put(Object key, Object value) throws CacheException {
         LOG.debugf( "Caching[%s] : [%s] -> [%s]",getName(), key, value );
         if ( key == null || value == null ) {
@@ -48,7 +46,6 @@ public class BaseGeneralDataRegion extends BaseRegion implements GeneralDataRegi
         cache.put( key, value );
     }
 
-    @Override
     public void evict(Object key) throws CacheException {
         LOG.debugf( "Evicting[%s]: %s",getName(), key );
         if ( key == null ) {
@@ -58,7 +55,6 @@ public class BaseGeneralDataRegion extends BaseRegion implements GeneralDataRegi
         cache.remove( key );
     }
 
-    @Override
     public void evictAll() throws CacheException {
         LOG.debugf( "evict cache[%s]", getName() );
         cache.clear();

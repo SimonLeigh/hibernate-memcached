@@ -29,27 +29,22 @@ class BaseNaturalIdRegionAccessStrategy extends BaseRegionAccessStrategy impleme
         return region.getSettings().isMinimalPutsEnabled();
     }
 
-    @Override
     public NaturalIdRegion getRegion() {
         return region;
     }
 
-    @Override
     public boolean insert(Object key, Object value ) throws CacheException {
         return putFromLoad( key, value, 0 , null );
     }
 
-    @Override
     public boolean afterInsert(Object key, Object value ) throws CacheException {
         return false;
     }
 
-    @Override
     public boolean update(Object key, Object value ) throws CacheException {
         return putFromLoad( key, value, 0 , null );
     }
 
-    @Override
     public boolean afterUpdate(Object key, Object value, SoftLock lock) throws CacheException {
         return false;
     }
