@@ -11,6 +11,10 @@ If you have any questions, or just want to drop a line to say it's working great
 Please note that this is an open source project. I work on it when I can and I implement what I feel like. I am volunteering my own free time for my own amusement.
 
 # Versions
+## 1.7
+  * Compatible with hibernate 4.3.6.
+  * Updated version of SpyMemcache client.
+
 ## 1.6
   * Compatible with hibernate 4.2.0.
 
